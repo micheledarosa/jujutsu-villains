@@ -14,7 +14,7 @@ Segui a [aula do projeto](https://www.youtube.com/watch?v=IcjhB0emU04) modifican
 - Vídeo na página principal
 - Favicon
 
-## [Deploy]()
+## ⭐ [Deploy](https://jujutsu-villains.netlify.app/)
 
 ![Imgur](https://i.imgur.com/otEvVHR.png)
 
