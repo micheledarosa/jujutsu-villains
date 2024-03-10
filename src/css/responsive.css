@@ -56,6 +56,10 @@
 }
 
 @media (max-width: 430px) {
+    body {
+        overflow: visible;
+    }
+
     main .character .image, .video {
         height: 36vh;
     }
