@@ -3,21 +3,22 @@ const characters = document.querySelectorAll('.character');
 
 buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
-        deselectButton();
-        deselectCharacter();
+        buttons.forEach(btn => btn.classList.remove('selected'));
+        characters.forEach(char => char.classList.remove('selected'));
 
         button.classList.add('selected');
         characters[index].classList.add('selected');
+
+        characters.forEach(character => {
+            const imageOrVideo = character.querySelector('.image, .video');
+            imageOrVideo.style.transition = 'opacity 0.5s ease-in-out';
+            imageOrVideo.style.opacity = '0';
+        });
+
+        setTimeout(() => {
+            const selectedCharacter = characters[index];
+            const selectedImageOrVideo = selectedCharacter.querySelector('.image, .video');
+            selectedImageOrVideo.style.opacity = '1';
+        }, 50);
     });
 });
-
-
-function deselectCharacter() {
-    const selectedCharacter = document.querySelector(".character.selected");
-    selectedCharacter.classList.remove('selected');
-}
-
-function deselectButton() {
-    const selectedButton = document.querySelector('.button.selected');
-    selectedButton.classList.remove('selected');
-}

@@ -71,8 +71,13 @@
     }
 
     .content .description {
+        font-size: 13px;
         max-height: 170px;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
+    }
+
+    .buttons .button {
+        background-color: #8B1E24;
     }
 }
 
